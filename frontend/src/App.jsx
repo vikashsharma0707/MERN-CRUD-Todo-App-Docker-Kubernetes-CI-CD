@@ -56,7 +56,7 @@ function App() {
           onChange={(e) => setDescription(e.target.value)}
           placeholder="Description"
         />
-        <button type="submit">{editingId ? 'Update' : 'Add'} Todo</button>
+        <button type="submit">{editingId ? 'Update' : 'Add'} Todo button</button>
       </form>
 
       <ul>
