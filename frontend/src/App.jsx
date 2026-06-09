@@ -12,17 +12,17 @@ function App() {
   }, []);
 
   const fetchTodos = async () => {
-    const res = await axios.get('http://localhost:5000/api/todos');
+    const res = await axios.get('https://mern-crud-ci-cd-simpe-pipeline.onrender.com/api/todos');
     setTodos(res.data);
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (editingId) {
-      await axios.put(`http://localhost:5000/api/todos/${editingId}`, { title, description });
+      await axios.put(`https://mern-crud-ci-cd-simpe-pipeline.onrender.com/api/todos/${editingId}`, { title, description });
       setEditingId(null);
     } else {
-      await axios.post('http://localhost:5000/api/todos', { title, description });
+      await axios.post('https://mern-crud-ci-cd-simpe-pipeline.onrender.com/api/todos', { title, description });
     }
     setTitle('');
     setDescription('');
@@ -30,7 +30,7 @@ function App() {
   };
 
   const handleDelete = async (id) => {
-    await axios.delete(`http://localhost:5000/api/todos/${id}`);
+    await axios.delete(`https://mern-crud-ci-cd-simpe-pipeline.onrender.com/api/todos/${id}`);
     fetchTodos();
   };
 
