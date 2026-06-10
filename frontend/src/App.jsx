@@ -91,7 +91,7 @@ function App() {
   }, []);
 
   const fetchTodos = async () => {
-    const res = await axios.get("http://localhost:5000/api/todos");
+    const res = await axios.get("https://mern-crud-todo-app-docker-kubernetes-ci.onrender.com/api/todos");
     setTodos(res.data);
   };
 
@@ -100,13 +100,13 @@ function App() {
 
     if (editingId) {
       await axios.put(
-        `http://localhost:5000/api/todos/${editingId}`,
+        `https://mern-crud-todo-app-docker-kubernetes-ci.onrender.com/api/todos/${editingId}`,
         { title, description }
       );
       setEditingId(null);
     } else {
       await axios.post(
-        "http://localhost:5000/api/todos",
+        "https://mern-crud-todo-app-docker-kubernetes-ci.onrender.com/api/todos",
         { title, description }
       );
     }
@@ -117,7 +117,7 @@ function App() {
   };
 
   const handleDelete = async (id) => {
-    await axios.delete(`http://localhost:5000/api/todos/${id}`);
+    await axios.delete(`https://mern-crud-todo-app-docker-kubernetes-ci.onrender.com/api/todos/${id}`);
     fetchTodos();
   };
 
