@@ -13,7 +13,7 @@ jobs:
 build-and-push:
 runs-on: ubuntu-latest
 
-
+```
 steps:
   - name: Checkout Repository
     uses: actions/checkout@v4
@@ -45,8 +45,7 @@ steps:
 
   - name: Run Frontend Lint
     working-directory: frontend
-    run: |
-      npm run lint || true
+    run: npm run lint || true
 
   # Docker Login
 
@@ -71,4 +70,4 @@ steps:
 
   - name: Push Frontend Docker Image
     run: docker push vikashsharma0707/frontend:latest
-
+```
