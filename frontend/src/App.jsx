@@ -131,7 +131,7 @@ function App() {
     <div className="container">
       <div className="card">
      <h1 className="heading">
-  🚀 Enterprise MERN CRUD Todo App | Docker, Kubernetes & CI/CD Devops
+  🚀 Enterprise MERN CRUD Todo App | Docker, Kubernetes & CI/CD 
 </h1>
 
         <form onSubmit={handleSubmit} className="todo-form">
